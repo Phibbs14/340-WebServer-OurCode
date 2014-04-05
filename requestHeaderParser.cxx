@@ -2,6 +2,8 @@
 #include <regex>
 #include <string>
 
+//Given the http request string, and an empty map (used to store the header values).
+//this method parses the hettp request headers and then places them into the headerMap.
 void parseRequestHeaders(std::stringstream& http_request, std::map<std::string, std::string>& headerMap)
 {
   using namespace std;
