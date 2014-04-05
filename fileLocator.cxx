@@ -7,6 +7,8 @@
 namespace bf = boost::filesystem;
 using namespace std;
 
+// Determines the file type of the path 
+// Returns 404 for file not found, since we're only handling these
 int parseExtension(bf::path path, string& fileType) {
 	string extension = bf::extension(path);
 	if 		(extension == ".txt")

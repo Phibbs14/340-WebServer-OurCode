@@ -23,6 +23,7 @@ int processRequest(RequestType const requestType, std::string fileLocation, std:
 	if (status != 200)
 		return status;
 
+	// Handles GET and HEAD, POST is handled before since parameters need to be read
 	switch (requestType) {
 		case GET: {
 			if (paramtersFound)

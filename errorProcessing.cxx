@@ -2,7 +2,8 @@
 
 using std::string;
 
-string getHtmlErrorPage(const string title, const string body) {
+// Returns an html page with the passed in title and body
+string getHtmlErrorPage(string const title, string const body) {
 	return 
 		"<!DOCTYPE html>\n"
       	"<html>\n"
@@ -12,8 +13,8 @@ string getHtmlErrorPage(const string title, const string body) {
 	;
 }
 
-string processErrorCode(int errorCode) {
-	
+// Returns an response message for the passed in errorCode
+string processErrorCode(int const errorCode) {
 	string htmlTitle, htmlBody, headerTitle;
 
 	switch (errorCode) {
